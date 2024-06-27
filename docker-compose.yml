@@ -1,0 +1,12 @@
+version: '3'
+services:
+  flutter:
+    build: .
+    volumes:
+      - ./:/app
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=${DISPLAY}
+    network_mode: host
+    user: developer
+    privileged: true
