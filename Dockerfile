@@ -13,6 +13,8 @@ RUN mkdir -p /app && chown developer:developer /app
 RUN chown -R developer:developer /sdks/flutter
 RUN mkdir -p /home/developer/.pub-cache && chown -R developer:developer /home/developer/.pub-cache
 
+RUN chown -R developer:developer /opt/android-sdk-linux
+
 USER developer
 WORKDIR /app
 
