@@ -5,8 +5,14 @@ services:
     volumes:
       - ./:/app
       - /tmp/.X11-unix:/tmp/.X11-unix
+      - flutter-sdk:/sdks/flutter
+      - flutter-pub-cache:/home/developer/.pub-cache
     environment:
       - DISPLAY=${DISPLAY}
     network_mode: host
     user: developer
     privileged: true
+
+volumes:
+  flutter-sdk:
+  flutter-pub-cache:

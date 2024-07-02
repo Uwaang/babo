@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
 RUN useradd -ms /bin/bash developer
 RUN mkdir -p /app && chown developer:developer /app
 RUN chown -R developer:developer /sdks/flutter
+RUN mkdir -p /home/developer/.pub-cache && chown -R developer:developer /home/developer/.pub-cache
 
 USER developer
 WORKDIR /app
@@ -19,4 +20,4 @@ RUN git config --global --add safe.directory /sdks/flutter
 
 ENV DISPLAY=:0
 
-CMD ["sh", "-c", "if [ ! -f pubspec.yaml ]; then flutter create . && flutter pub get; fi && flutter run --release"]
+CMD ["sh", "-c", "flutter pub get && flutter run --release"]
