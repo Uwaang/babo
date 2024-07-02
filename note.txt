@@ -1,0 +1,13 @@
+### 도커 컴포즈 관련
+docker-compose down
+docker-compose build
+docker-compose up
+
+### 플러터 빌드 관련
+flutter pub get
+flutter pub run flutter_launcher_name:main
+flutter clean
+flutter pub get
+flutter build apk --release
+cp ./build/app/outputs/flutter-apk/app-release.apk /app
+flutter build ios --release
