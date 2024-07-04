@@ -23,7 +23,7 @@ class WordSequence extends StatefulWidget {
 }
 
 class _WordSequenceState extends State<WordSequence> {
-  List<String> words = ['you', 'are', 'babo'];
+  List<String> words = ['You..', 'Are..', 'Babo..'];
   int _currentIndex = 0;
 
   void _showNextWord() {
