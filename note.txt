@@ -8,6 +8,18 @@ flutter pub get
 flutter pub run flutter_launcher_name:main
 flutter clean
 flutter pub get
+
 flutter build apk --release
 cp ./build/app/outputs/flutter-apk/app-release.apk /app
+
 flutter build ios --release
+
+flutter build appbundle --release
+cp ./build/app/outputs/bundle/release/app-release.aab /app
+
+##개인정보처리방침 생성
+https://app.privacypolicies.com/
+
+#아이콘 변경
+flutter clean
+flutter pub get
